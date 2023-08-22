@@ -1,0 +1,173 @@
+/* General  */
+:root {
+    --bg-color: #272B30;
+    --main-color: #3A497B;
+    --main-font: 'Nerko One', cursive;
+}
+
+body {
+    background-color: #272B30;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    color: white;
+}
+
+/* End General */
+/* HOme------------------------------------------------------------------ */
+/* Header */
+header {
+    height: 200px;
+    background-image: url('../images/wraper.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+/* End Header */
+
+
+/* Navbar */
+.navbar {
+    background-color: #3A497B !important;
+    font-family: 'Nerko One', cursive;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.active {
+    color: #088DC0 !important;
+    transition: all 0.4s !important;
+}
+
+.nav-link:hover {
+    color: #088DC0 !important;
+}
+
+/* End Nav */
+
+/* Cards */
+.card {
+    background-color: var(--bg-color);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+small {
+    background-color: #32383E;
+    font-family: var(--main-font);
+    font-weight: 200;
+    font-size: small;
+}
+
+.card-title button {
+    background-color: #0D6EFD;
+    font-family: var(--main-font);
+}
+
+.card-text {
+    color: #909295;
+    font-family: var(--main-font);
+    height: 75px;
+    overflow: hidden;
+}
+
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover img,
+.card:hover button {
+    filter: grayscale(0%);
+}
+
+.card img,
+.card-title button {
+    filter: grayscale(75%);
+    transition: all 1s;
+}
+
+/* End cards */
+/* END HOME -------------------------------------------- */
+.details-panel {
+    font-family: var(--main-font);
+}
+
+.details-panel h2,
+.details-content h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.details-header>i:hover {
+    color: red !important;
+}
+
+/* DETAILS PANEL START  */
+
+a {
+    text-decoration: unset;
+}
+
+#close {
+    cursor: pointer;
+}
+
+/* LOADING--------------------------- */
+.loading {
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.loader {
+
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: absolute;
+    left: calc(50% - 48px);
+    top: calc(50% - 48px);
+
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
